@@ -7,7 +7,8 @@
     "dev": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch",
     "prepare": "husky",
     "test": "vitest",
-    "test:run": "vitest run"
+    "test:run": "vitest run",
+    "start": "serve . -l 3000"
   },
   "lint-staged": {
     "*.html": "prettier --write",
@@ -21,12 +22,14 @@
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.58.2",
     "eslint": "^10.0.2",
     "globals": "^17.4.0",
     "husky": "^9.1.7",
     "jsdom": "^28.1.0",
     "lint-staged": "^16.3.1",
     "prettier": "^3.8.1",
+    "serve": "^14.2.5",
     "tailwindcss": "^3.4.12",
     "vitest": "^4.0.18"
   }
