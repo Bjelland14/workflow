@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "dev": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch",
-    "prepare": "husky",
-    "test": "vitest",
-    "test:run": "vitest run",
-    "start": "serve . -l 3000"
-  },
+ "scripts": {
+  "dev": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch",
+  "prepare": "husky",
+  "test": "vitest",
+  "test:run": "vitest run",
+  "test:e2e": "playwright test",
+  "start": "serve . -l 3000"
+},
   "lint-staged": {
     "*.html": "prettier --write",
     "*.js": [
@@ -23,6 +24,7 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.58.2",
+    "dotenv": "^17.3.1",
     "eslint": "^10.0.2",
     "globals": "^17.4.0",
     "husky": "^9.1.7",
